@@ -3,22 +3,19 @@ package com.example.androidcard
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.androidcard.databinding.RecyclerviewItemgroupBinding
+import com.example.androidcard.databinding.RecyclerviewItemsubcatBinding
 
 
-class MainAdapter(val subCat: Array<String>):RecyclerView.Adapter<MainAdapter.MainViewHolder>() {
- inner class MainViewHolder(val itemBinding: RecyclerviewItemgroupBinding)
+class SubcatAdapter(val subCat: Array<String>):RecyclerView.Adapter<SubcatAdapter.MainViewHolder>() {
+ inner class MainViewHolder(val itemBinding: RecyclerviewItemsubcatBinding)
      :RecyclerView.ViewHolder(itemBinding.root) {
      fun bindItem(subCat: String) {
-         val adapter=SubcatAdapter(MainCategories.getMainCategory().subCat)
-         itemBinding.group.text = subCat
-         itemBinding.subcatArea.adapter=adapter
-
+         itemBinding.subcat.text = subCat
      }
  }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
-        return MainViewHolder(RecyclerviewItemgroupBinding.inflate(LayoutInflater.from(parent.context),parent,false))
+        return MainViewHolder(RecyclerviewItemsubcatBinding.inflate(LayoutInflater.from(parent.context),parent,false))
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
