@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding?.root)
         val adapter = MainAdapter(MainCategories.getMainCategory().subCat)
 
-        binding?.subcatArea?.adapter=adapter
+        binding?.groupArea?.adapter=adapter
+
         binding?.textMainCat?.text=MainCategories.getMainCategory().name
         var drawable: Drawable? = ResourcesCompat.getDrawable(resources, R.drawable.ic_chevron_down, null)
         binding?.chevronButton?.setOnClickListener {

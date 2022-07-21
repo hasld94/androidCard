@@ -74,12 +74,13 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/subcatArea"
+                android:id="@+id/groupArea"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                tools:listitem="@layout/recyclerview_item"
+                tools:listitem="@layout/recyclerview_itemgroup"
                 />
+
 
 
         </LinearLayout>
