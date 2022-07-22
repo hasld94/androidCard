@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp"
+    android:padding="5dp"
     >
 
 
@@ -21,9 +21,21 @@
         android:id="@+id/subcatArea"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp"
         tools:listitem="@layout/recyclerview_itemsubcat" />
 
+    <ImageView
+        android:id="@+id/groupIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:padding="2dp"
+        app:layout_constraintEnd_toStartOf="@+id/group"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_group" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

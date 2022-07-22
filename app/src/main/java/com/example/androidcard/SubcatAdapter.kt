@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.androidcard.databinding.RecyclerviewItemsubcatBinding
 
 
-class SubcatAdapter(val subCat: Array<String>):RecyclerView.Adapter<SubcatAdapter.MainViewHolder>() {
+class SubcatAdapter(val subCat: ArrayList<String>):RecyclerView.Adapter<SubcatAdapter.MainViewHolder>() {
  inner class MainViewHolder(val itemBinding: RecyclerviewItemsubcatBinding)
      :RecyclerView.ViewHolder(itemBinding.root) {
      fun bindItem(subCat: String) {
